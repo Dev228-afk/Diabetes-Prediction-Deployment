@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Diabetes Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
+        <!-- BootStrap -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+            integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+            integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+            crossorigin="anonymous"></script>
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" -->
+            <!-- integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> --> 
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" -->
+            <!-- integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
+    </head>
+
+    <body id="bodi">
+
+        <!-- Website Title -->
+        <div class="container">
+            <h2 class='container-heading'>
+                <span class="heading_font">Diabetes Predictor</span>
+            </h2>
+            <div class='description'>
+            </div>
+        </div>
+
+        <!-- Text Area -->
+        <div class="ml-container">
+            <form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="text" name="glucose" placeholder="Glucose (mg/dL) eg. 75"><br>
+                <input class="form-input" type="text" name="bloodpressure"
+                    placeholder="Blood Pressure (mmHg) eg. 90"><br>
+                <input class="form-input" type="text" name="skinthickness"
+                    placeholder="Skin Thickness (mm) eg. 150"><br>
+                <input class="form-input" type="text" name="insulin" placeholder="Insulin Level (IU/mL) eg. 75"><br>
+                <input class="form-input" type="text" name="bmi" placeholder="Body Mass Index (kg/m²) eg. 23.1"><br>
+                <input class="form-input" type="text" name="dpf" placeholder="Diabetes Pedigree Function eg. 0.62"><br>
+                <input class="form-input" type="text" name="age" placeholder="Age (years) eg. 40"><br>
+                <input class="form-input" type="text" name="pregnancies" placeholder="Number of Pregnancies eg. 0"><br>
+                <input type="submit" class="my-cta-button" value="Predict">
+            </form>
+        </div>
+
+        <!-- Footer -->
+        <div class='footer'>
+            <div class="contact">
+                <a target="_blank" href="https://github.com/Dev228-afk/Diabetes-Prediction-Deployment"><i
+                        class="fab fa-github fa-lg contact-icon justify-content-center" id="git"></i></a>
+                        <i class="footer_text">Made by Dev Ansodariya.</i>
+                <a target="_blank" href="https://www.linkedin.com/in/dev-ansodariya"><i
+                        class="fab fa-linkedin fa-lg contact-icon justify-content-center" id="lkd"></i></a>
+            </div>
+            <!-- <p class='footer-description'>/p> -->
+        </div>
+
+    </body>
+   
+</html>
